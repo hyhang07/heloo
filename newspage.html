@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="footerCSS.css">
+    <title>News: A Beautiful Planet Called Earth</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("home_bg.jpg");
+            background-size: 100%;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .article {
+            margin-bottom: 40px;
+            display: inline-block;
+            width: calc(33.33% - 20px); /* Adjust this value as needed */
+            vertical-align: top;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        .article:last-child {
+            margin-right: 0;
+        }
+        .article img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .article h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .article p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        /* Styling for pop-up box */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+        }
+
+        /* Styling for overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
+        button{
+            border: none;
+            background-color: rgb(127, 255, 116);
+            border-radius: 20px 20px 20px 20px;
+        }
+        button:hover {
+            background-color: rgb(70, 200, 90); /* Darken the background color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Latest News: A Beautiful Planet Called Earth</h1>
+
+        <div class="article">
+            <h2>Protecting Wildlife Habitats</h2>
+            <img src="protectWildlife.png" alt="Wildlife Habitat">
+            <p>Conservation efforts are underway to protect and preserve wildlife habitats around the world. From rainforests to coral reefs, these ecosystems are essential for biodiversity and the health of our planet.</p>
+            <!-- Button to show pop-up box -->
+            <button onclick="showPopup('wildlife')">Read More</button>
+        </div>
+
+        <div class="article">
+            <h2>Celebrating Earth Day</h2>
+            <img src="celebrateEarthDay.png" alt="Earth Day">
+            <p>Earth Day, celebrated annually on April 22nd, is a global event dedicated to environmental protection. It serves as a reminder of the importance of taking action to protect our planet and promote sustainability.</p>
+            <!-- Button to show pop-up box -->
+            <button onclick="showPopup('earth-day')">Read More</button>
+        </div>
+
+        <div class="article">
+            <h2>Renewable Energy Initiatives</h2>
+            <img src="renewableEnergy.jpg" alt="Renewable Energy">
+            <p>Countries around the world are investing in renewable energy sources such as solar, wind, and hydroelectric power. These initiatives aim to reduce reliance on fossil fuels and combat climate change.</p>
+            <!-- Button to show pop-up box -->
+            <button onclick="showPopup('renewable-energy')">Read More</button>
+        </div>
+
+    </div>
+
+    <!-- Pop-up box -->
+	<div class="popup" id="popup">
+		<div id="popup-content"></div>
+		<button onclick="hidePopup()">Close</button>
+	</div>
+
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="hidePopup()"></div>
+
+    <script>
+        // Function to show pop-up box with specific content
+        function showPopup(contentId) {
+            var popup = document.getElementById("popup");
+            var overlay = document.getElementById("overlay");
+            var content = document.getElementById(contentId + "-content").innerHTML;
+            var popupContent = document.getElementById("popup-content");
+            popupContent.innerHTML = content;
+            popup.style.display = "block";
+            overlay.style.display = "block";
+        }
+
+        // Function to hide pop-up box
+        function hidePopup() {
+            var popup = document.getElementById("popup");
+            var overlay = document.getElementById("overlay");
+            popup.style.display = "none";
+            overlay.style.display = "none";
+        }
+    </script>
+
+    <!-- Additional pop-up content -->
+    <div style="display: none;">
+        <!-- Pop-up content for Protecting Wildlife Habitats -->
+        <div id="wildlife-content">
+            <h2>More about Protecting Wildlife Habitats</h2>
+            <p>Wildlife habitats are vital for the survival of countless species and the overall health of our planet. As human activities continue to encroach upon natural areas, it's imperative to focus on conservation efforts to protect and preserve these habitats. Here are some key points about protecting wildlife habitats:</p>
+            <ol>
+                <li><strong>Biodiversity Preservation:</strong> Wildlife habitats support a diverse range of plants, animals, and microorganisms. By conserving these habitats, we ensure the survival of various species and maintain the intricate web of life on Earth.</li>
+                <li><strong>Ecosystem Services:</strong> Healthy habitats provide essential ecosystem services such as pollination, water filtration, and carbon sequestration. These services are crucial for human well-being and the functioning of ecosystems.</li>
+                <li><strong>Threats to Habitats:</strong> Human activities such as deforestation, urbanization, pollution, and climate change pose significant threats to wildlife habitats worldwide. These activities degrade and fragment habitats, leading to loss of biodiversity and ecosystem services.</li>
+                <li><strong>Conservation Strategies:</strong> Various conservation strategies are employed to protect wildlife habitats, including establishing protected areas, implementing sustainable land management practices, and promoting habitat restoration efforts. Additionally, raising awareness and engaging local communities in conservation initiatives are essential for long-term success.</li>
+                <li><strong>Global Collaboration:</strong> Protecting wildlife habitats requires global collaboration and concerted efforts from governments, non-governmental organizations, local communities, and individuals worldwide. By working together, we can make a significant impact in safeguarding these critical ecosystems.</li>
+            </ol>
+            <p>By prioritizing the protection of wildlife habitats, we can ensure a brighter future for both wildlife and humanity. Let us commit to preserving these invaluable natural areas for generations to come.</p>
+        </div>
+
+        <!-- Pop-up content for Celebrating Earth Day -->
+        <div id="earth-day-content">
+            <h2>Celebrating Earth Day</h2>
+            <p>Earth Day, celebrated annually on April 22nd, is a global event dedicated to environmental protection. It serves as a reminder of the importance of taking action to protect our planet and promote sustainability.</p>
+            <ul>
+                <li><strong>History of Earth Day:</strong> Earth Day was first celebrated on April 22, 1970, and is now recognized as the planet's largest civic event. It was founded by Senator Gaylord Nelson of Wisconsin, who was inspired to organize a national "teach-in" on environmental issues after witnessing the 1969 oil spill in Santa Barbara, California.</li>
+                <li><strong>Significance of April 22nd:</strong> April 22nd was chosen as Earth Day because it falls between spring break and final exams, making it an opportune time for college students to participate. Since its inception, Earth Day has grown into a global movement, with millions of people participating in activities and events to raise awareness about environmental issues.</li>
+                <li><strong>Themes and Initiatives:</strong> Each year, Earth Day has a specific theme or focus, ranging from climate change and renewable energy to plastic pollution and biodiversity conservation. The Earth Day Network, the organization behind the event, promotes various initiatives to address these issues, such as tree planting campaigns, clean-up events, and advocacy efforts.</li>
+                <li><strong>Impact and Legacy:</strong> Over the years, Earth Day has led to significant environmental achievements, including the passage of key environmental laws and the creation of protected areas. However, the work is far from over, and Earth Day serves as a rallying cry for continued action to protect and preserve the planet for future generations.</li>
+                <li><strong>Take Action:</strong> Individuals can participate in Earth Day activities by volunteering for local clean-up events, attending educational workshops, or supporting environmental organizations. Additionally, adopting sustainable habits such as reducing energy consumption, recycling, and advocating for environmental policies can make a difference in protecting the planet.</li>
+            </ul>
+            <p>Earth Day is not just a single day but a reminder of our collective responsibility to care for the Earth every day. By coming together to address environmental challenges, we can create a more sustainable and equitable future for all.</p>
+        </div>
+
+        <div id="renewable-energy-content">
+            <h2>Renewable Energy Initiatives</h2>
+            <p>Countries around the world are investing in renewable energy sources such as solar, wind, and hydroelectric power. These initiatives aim to reduce reliance on fossil fuels and combat climate change.</p>
+            <ul>
+                <li><strong>Transition to Clean Energy:</strong> Renewable energy initiatives involve transitioning from traditional fossil fuel-based energy sources to cleaner alternatives such as solar, wind, and hydroelectric power. This transition is crucial for reducing greenhouse gas emissions and mitigating the impacts of climate change.</li>
+                <li><strong>Solar Energy:</strong> Solar power is generated by harnessing energy from the sun using photovoltaic panels or solar thermal systems. It is a sustainable and abundant source of energy that can be used to generate electricity, heat water, and power various applications.</li>
+                <li><strong>Wind Energy:</strong> Wind turbines convert the kinetic energy of wind into electricity. Wind power is one of the fastest-growing renewable energy sources and has the potential to provide a significant portion of the world's electricity needs.</li>
+                <li><strong>Hydroelectric Power:</strong> Hydroelectric power utilizes the energy of flowing water to generate electricity. It is a reliable and established form of renewable energy, with large-scale hydroelectric projects contributing to grid stability and energy security.</li>
+                <li><strong>Benefits of Renewable Energy:</strong> Renewable energy offers numerous environmental, economic, and social benefits. It helps reduce air and water pollution, creates jobs, promotes energy independence, and drives innovation in clean technologies.</li>
+                <li><strong>Challenges and Opportunities:</strong> While renewable energy has significant potential, there are challenges to overcome, such as intermittency, energy storage, and infrastructure development. However, advancements in technology and supportive policies present opportunities for further expansion of renewable energy initiatives.</li>
+            </ul>
+            <p>By investing in renewable energy initiatives, countries can transition to a more sustainable energy future and mitigate the impacts of climate change while promoting economic growth and energy security.</p>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Management</h4>
+                    <ul class="footerUL">
+                        <li><a href="main.html">Home</a></li>
+                        <li><a href="About us.html">About us</a></li>
+                        <li><a href="contact us.html">Contact us</a></li>
+                        <li><a href="Product2.0.html">Product</a></li>
+                        <li><a href="LogIn.html">Login</a></li>
+                        <li><a href="Register.html">Register</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Donation</h4>
+                    <ul class="footerUL">
+                        <li><a href="https://protect.worldwildlife.org/page/65217/donate/1?en_og_source=Web_Donation&ea.tracking.id=Web_Topnav&supporter.appealCode=AWE2402OQ18299A01179RX&_ga=2.194802925.1750679100.1712249479-1996850052.1711616794&_gl=1*k11u21*_ga*MTk5Njg1MDA1Mi4xNzExNjE2Nzk0*_ga_FK6M9RK84Z*MTcxMjI0OTQ3NS45LjEuMTcxMjI0OTQ3OC41Ny4wLjk3OTI0NDE1NA..*_gcl_au*MjA0ODAyODc2OC4xNzExNjE2Nzk0">Donation for WWF</a></li>
+                        <li><a href="https://preserve.nature.org/page/145311/donate/1">Donation for TNC</a></li>
+                        <li><a href="https://bronxzoo.com/donate">Donation for WCS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>More Information</h4>
+                    <ul class="footerUL">
+                        <li><a href="https://www.worldwildlife.org/">WWF</a></li>
+                        <li><a href="https://www.nature.org/en-us/">TNC</a></li>
+                        <li><a href="https://www.wcs.org/about-us?gad_source=1&gclid=Cj0KCQjwn7mwBhCiARIsAGoxjaIMIeZBppKAfuUTQmJeKM-6jan4X1ORKZUlAqrqL69BJPnB257fn1gaAsd0EALw_wcB">WCS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us (Web Creator)</h4>
+                    <ul class="footerUL">
+                        <li><a href="https://www.instagram.com/aaronchoong286/">Aaron Chong</a></li>
+                        <li><a href="https://www.instagram.com/hy_hang.07/">Yee Hang</a></li>
+                        <li><a href="https://www.instagram.com/louishaole/">Louis Cha</a></li>
+                        <li><a href="https://www.instagram.com/zongting23/">Zong Ting</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

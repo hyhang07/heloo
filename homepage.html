@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="footerCSS.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Places of Earth</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("home_bg.jpg");
+            background-size: 100%;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #545454;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .places {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .place {
+            flex: 0 0 calc(50% - 20px);
+            margin-bottom: 20px;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        .place img {
+            width: 100%;
+            height: 150px; /* Adjust as needed */
+            object-fit: cover;
+            border-radius: 5px 5px 0 0;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border-radius: 0 0 5px 5px;
+            padding: 20px;
+            color: #fff;
+        }
+        .place h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .place p {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: #a5a5a5;">Beautiful Places of Earth</h1>
+    <div class="container">
+        <div class="places">
+            <div class="place">
+                <img src="Santorini.jpg" alt="Santorini, Greece">
+                <div class="overlay">
+                    <h2>Santorini, Greece</h2>
+                    <p>Known for its stunning sunsets, white-washed buildings with blue domes, and crystal-clear waters, Santorini is a picturesque island in the Aegean Sea.</p>
+                </div>
+            </div>
+            <div class="place">
+                <img src="Banff National Park.jpg" alt="Banff National Park, Canada">
+                <div class="overlay">
+                    <h2>Banff National Park, Canada</h2>
+                    <p>Situated in the Canadian Rockies, Banff National Park boasts majestic mountains, turquoise lakes, and diverse wildlife, making it a paradise for outdoor enthusiasts.</p>
+                </div>
+            </div>
+            <div class="place">
+                <img src="LadyMusgraveIslandGreatBarrierReef.jpg" alt="Great Barrier Reef, Australia">
+                <div class="overlay">
+                    <h2>Great Barrier Reef, Australia</h2>
+                    <p>The Great Barrier Reef is the world's largest coral reef system, renowned for its vibrant marine life, colorful coral formations, and clear waters.</p>
+                </div>
+            </div>
+            <div class="place">
+                <img src="SerengetiNationalPark.jpg" alt="Serengeti National Park, Tanzania">
+                <div class="overlay">
+                    <h2>Serengeti National Park, Tanzania</h2>
+                    <p>Famous for its annual migration of wildebeest and other wildlife, the Serengeti offers expansive savannahs, acacia-dotted landscapes, and unforgettable safari experiences.</p>
+                </div>
+            </div>
+            <div class="place">
+                <img src="BoraBora.jpg" alt="Bora Bora, French Polynesia">
+                <div class="overlay">
+                    <h2>Bora Bora, French Polynesia</h2>
+                    <p>With its overwater bungalows, lush tropical scenery, and turquoise lagoon, Bora Bora is a dream destination for honeymooners and luxury travelers.</p>
+                </div>
+            </div>
+            <div class="place">
+                <img src="NorwegianFjords.png" alt="Norwegian Fjords, Norway">
+                <div class="overlay">
+                    <h2>Norwegian Fjords, Norway</h2>
+                    <p>These dramatic, glacier-carved landscapes feature steep cliffs, cascading waterfalls, and deep blue fjords, offering some of the most breathtaking scenery in the world.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Management</h4>
+                    <ul class="footerUL">
+                        <li><a href="main.html">Home</a></li>
+                        <li><a href="About us.html">About us</a></li>
+                        <li><a href="contact us.html">Contact us</a></li>
+                        <li><a href="Product2.0.html">Product</a></li>
+                        <li><a href="LogIn.html">Login</a></li>
+                        <li><a href="Register.html">Register</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Donation</h4>
+                    <ul class="footerUL">
+                        <li><a href="https://protect.worldwildlife.org/page/65217/donate/1?en_og_source=Web_Donation&ea.tracking.id=Web_Topnav&supporter.appealCode=AWE2402OQ18299A01179RX&_ga=2.194802925.1750679100.1712249479-1996850052.1711616794&_gl=1*k11u21*_ga*MTk5Njg1MDA1Mi4xNzExNjE2Nzk0*_ga_FK6M9RK84Z*MTcxMjI0OTQ3NS45LjEuMTcxMjI0OTQ3OC41Ny4wLjk3OTI0NDE1NA..*_gcl_au*MjA0ODAyODc2OC4xNzExNjE2Nzk0">Donation for WWF</a></li>
+                        <li><a href="https://preserve.nature.org/page/145311/donate/1">Donation for TNC</a></li>
+                        <li><a href="https://bronxzoo.com/donate">Donation for WCS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>More Information</h4>
+                    <ul class="footerUL">
+                        <li><a href="https://www.worldwildlife.org/">WWF</a></li>
+                        <li><a href="https://www.nature.org/en-us/">TNC</a></li>
+                        <li><a href="https://www.wcs.org/about-us?gad_source=1&gclid=Cj0KCQjwn7mwBhCiARIsAGoxjaIMIeZBppKAfuUTQmJeKM-6jan4X1ORKZUlAqrqL69BJPnB257fn1gaAsd0EALw_wcB">WCS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us (Web Creator)</h4>
+                    <ul class="footerUL">
+                        <li><a href="https://www.instagram.com/aaronchoong286/">Aaron Chong</a></li>
+                        <li><a href="https://www.instagram.com/hy_hang.07/">Yee Hang</a></li>
+                        <li><a href="https://www.instagram.com/louishaole/">Louis Cha</a></li>
+                        <li><a href="https://www.instagram.com/zongting23/">Zong Ting</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

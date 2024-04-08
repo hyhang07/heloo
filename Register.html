@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <Title>Register Your Account</Title>
+    <link rel="stylesheet" href="footerCSS.css">
+    <style type="text/css">
+    .bg {
+        background-color: white;
+        opacity: 65%;
+        padding: 20px;
+        border-radius: 5px;
+        width: 400px; 
+        margin: auto; 
+}
+
+        body{
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url(earth2.jpg);
+        }
+
+        .bg h2{
+            font-size: 2em;
+            margin-top: 1px;
+            color: rgb(0, 0, 0);
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        label{
+            margin-bottom: 1px;
+        }
+
+        input[type="text"], input[type="email"], input[type="date"], input[type="password"], select{
+            position: relative;
+            margin: 19px 0;
+            width: 280px;
+            border-bottom: 2px solid #fff;
+        }
+
+        .button{
+            padding: 10px;
+            background-color: pink;
+            color:black;
+        }
+
+        .homebanner {
+             height: 100%;
+        }
+
+        .navbar img{
+            width: 100px;
+            height: auto;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 20px;
+        }
+
+        .navbar {
+            width: 1000px;
+            margin: auto;
+            padding: 20px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: transparent;
+            z-index: 1;
+        }
+
+        .navbar ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 10px;
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width: 0%;
+            background: #586285;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+
+        .navbar ul li:hover::after {
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section id="home">
+
+        
+        <div class="bg">
+            <form for="register" method="post" action="login.html">
+                <h2>Sign Up</h2>
+                <label for="fname">
+                    First Name: <input type="text" id="fname" name="fname" placeholder="first name" required>
+                </label>
+                <br><br>
+                <label for="lname">
+                    Last Name: <input type="text" id="lname" name="lname" placeholder="last name" required>
+                </label>
+
+                <br><br>
+
+                <label for="email">
+                    Email Address: <input type="email" id="email" name="email" placeholder="FirstName@gmail.com" required>
+                </label>
+
+                <br><br>
+
+                <label for="password">
+                    Password: <input type="password" id="password" name="password" placeholder="xxxxxxxx" required>
+                </label>
+
+                <br><br>
+                <label for="password">
+                    Confirm Password: <input type="password" id="Newpassword" name="password" placeholder="xxxxxxxx" required>
+                </label>
+
+                <br>
+
+            <label for="date">
+                Date of birth: <input name="date" id="date" type="date" required>
+            </label>
+
+            <br><br>
+
+            <label for="gender">
+                Gender:
+                <select name="gender" id="gender" class="inputName">
+                    <option selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </label>
+
+            <br><br>
+
+            <button type="button" value="Button" class="button" onclick="checkpassword()">Sign Up</button>
+        </form>
+    </div>
+</section>
+    
+<script>
+    function checkpassword(){
+        event.preventDefault();
+        let password = document.getElementById("password").value;
+        let NewPassword = document.getElementById("Newpassword").value;
+        let email = document.getElementById("email").value;
+        let fname = document.getElementById("fname").value;
+        let lname = document.getElementById("lname").value;
+        let date = document.getElementById("date").value;
+        let gender = document.getElementById("gender").value;
+
+        if(password.length === 0 || email.length === 0 || NewPassword.length === 0 || fname.length === 0 || lname.length === 0){
+            alert("You are not allowed to leave any field empty");
+            return false;
+        } else if(password !== NewPassword){
+            alert("Passwords don't match");
+            return false;
+        }
+
+        document.cookie = fname=${fname};;
+        document.cookie = lname=${lname};;
+        document.cookie = email=${email};;
+        document.cookie = password=${password};;
+        document.cookie = Newpassword=${NewPassword};;
+        document.cookie = date=${date};;
+        document.cookie = gender=${gender};;
+
+        alert("Registration successful!");
+        window.location.href = "login.html";
+    }
+</script>
+
+
+
+</body>
+</html>

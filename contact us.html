@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <link rel="stylesheet" href="footerCSS.css">
+    <meta name = "viewport" content="" width = device-width, initial scale = "1.0">
+    <title> 
+        Contact Us -- Beautiful World
+    </title>
+    
+    <style>
+        <!--header-->
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("home_bg.jpg");
+            color: black
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 { 
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1E6DF0;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .email {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #1E6DF0;
+        }
+
+        <!--form-->
+        body {
+            font-family: Arial, sans-seriff;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(240, 233, 233);
+            color: black;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(245, 236, 236, 0.89);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1E6DF0;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            margin-bottom: 100px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type = "text"],
+        input[type = "email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid rgb(17, 1, 1);
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        text area {
+            resize: vertical;
+            height: 150px;
+        }
+        input[type = "submit"] {
+            background-color: #1E6DF0;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type = "submit"]:hover {
+            background-color: #1E6DF0;
+        }
+    </style>  
+</head>
+
+<body>
+    <div class = "container">
+        <h1>
+            Contact Us
+        </h1>
+        <p> If you have any questions or inquiries, please feel free to provide feedback to us. Feedback provided to us will be anonymous.
+        <p class = "email">
+            Email: contact@beautifulworld.com
+        </p>  
+    </div>
+
+    <!--feedback form-->
+    <h1>
+        Feedback Form
+    </h1>
+        <form action = "#" method = "post">
+            <label for = "name"> 
+                Name:
+            </label>
+            <input type = "text" id = "name" name="name" required>
+            <br>
+            <label for = "email">
+                Email:
+            </label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for = "feedback">
+                Feedback:
+            </label>
+            <textarea id = "feedback" name = "feedback" required></textarea>
+            <br>
+            <input type = "submit" value = "Submit">
+        </form>
+        <footer class="footer">
+            <div class="container-footer">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Management</h4>
+                        <ul class="footerUL">
+                            <li><a href="main.html">Home</a></li>
+                            <li><a href="About us.html">About us</a></li>
+                            <li><a href="contact us.html">Contact us</a></li>
+                            <li><a href="Product2.0.html">Product</a></li>
+                            <li><a href="LogIn.html">Login</a></li>
+                            <li><a href="Register.html">Register</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Donation</h4>
+                        <ul class="footerUL">
+                            <li><a href="https://protect.worldwildlife.org/page/65217/donate/1?en_og_source=Web_Donation&ea.tracking.id=Web_Topnav&supporter.appealCode=AWE2402OQ18299A01179RX&_ga=2.194802925.1750679100.1712249479-1996850052.1711616794&_gl=1*k11u21*_ga*MTk5Njg1MDA1Mi4xNzExNjE2Nzk0*_ga_FK6M9RK84Z*MTcxMjI0OTQ3NS45LjEuMTcxMjI0OTQ3OC41Ny4wLjk3OTI0NDE1NA..*_gcl_au*MjA0ODAyODc2OC4xNzExNjE2Nzk0">Donation for WWF</a></li>
+                            <li><a href="https://preserve.nature.org/page/145311/donate/1">Donation for TNC</a></li>
+                            <li><a href="https://bronxzoo.com/donate">Donation for WCS</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>More Information</h4>
+                        <ul class="footerUL">
+                            <li><a href="https://www.worldwildlife.org/">WWF</a></li>
+                            <li><a href="https://www.nature.org/en-us/">TNC</a></li>
+                            <li><a href="https://www.wcs.org/about-us?gad_source=1&gclid=Cj0KCQjwn7mwBhCiARIsAGoxjaIMIeZBppKAfuUTQmJeKM-6jan4X1ORKZUlAqrqL69BJPnB257fn1gaAsd0EALw_wcB">WCS</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow Us (Web Creator)</h4>
+                        <ul class="footerUL">
+                            <li><a href="https://www.instagram.com/aaronchoong286/">Aaron Chong</a></li>
+                            <li><a href="https://www.instagram.com/hy_hang.07/">Yee Hang</a></li>
+                            <li><a href="https://www.instagram.com/louishaole/">Louis Cha</a></li>
+                            <li><a href="https://www.instagram.com/zongting23/">Zong Ting</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <Title>Love Your Planet</Title>
+        <link rel="stylesheet" href="footerCSS.css">
+        <style type="text/css">
+            .bg{
+                background-color: white;
+                opacity: 70%;
+                padding: 20px;
+                border-radius:5px;
+                width: 500px;
+                margin: auto; 
+            }
+
+            .loginButton{
+                padding:10px;
+                background-color: blue;
+                color:white;
+
+            }
+
+            body{
+                font-size: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background-image: url(earth.jpg);
+                background-size: cover; 
+            }
+
+            .Login{
+                padding: 10px;
+                border-radius:10px;
+                border: 2px solid black;
+                width: 450px;
+            }
+
+            .register{
+                text-decoration: none;
+                color: black;
+                font-size: 15px;
+            }
+
+            .logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 20px;
+        }
+
+        .navbar img{
+            width: 100px;
+            height: auto;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 20px;
+        }
+
+        .navbar {
+            width: 1000px;
+            margin: auto;
+            padding: 20px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: transparent;
+            z-index: 1;
+        }
+
+        .navbar ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 10px;
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width: 0%;
+            background: #586285;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+
+        .navbar ul li:hover::after {
+            width: 100%;
+        }
+        </style>
+    </head>
+
+    <body>
+        <section id="home">
+
+        <div class="bg">
+        <h2><span style="color:rgb(0, 0, 0); text-shadow: 0px 1px 0px black;">Log In</span></h2>
+
+        <form for="Login" method="post" action=" ">
+            <label for="fname">
+                Username (Email): <input type="text" id="fname" placeholder="Metroo" class="Login" required>
+            </label>
+
+            <br>
+            <br>
+        
+            <label for="password">
+                Password: <input type="password" id="password" placeholder="xxxxxxxx" maxlength="16" minlength="8" class="Login" required>
+            </label>
+            
+            <br>
+            <br>
+
+            <input type="checkbox" id="rememberme" name="click me">Remember Me</input>
+
+            <br>
+            <br>
+
+            <div class="register">
+                <p>Don't have a account? <a href="register.html">Sign Up</a></p>
+            </div>
+
+            <br>
+            
+            <label for="submit">
+                <button type="button" value="Button" class="loginButton" onclick="location.href='Main.html'">Log In</button> <button type="reset" value="Button" class="loginButton">Reset</button> 
+            </label>
+        </div>
+        </form>
+
+        <script>
+            document.getElementById("Login").addEventListener("submit", function(event){
+                event.preventDefault();
+                var fname = document.getElementById("fname").value;
+                var password = document.getElementById("password").value;
+                var storedEmail = getCookie("email");
+                var storedPassword = getCookie("password");
+
+                if (email === storedEmail && password === storedPassword) {
+                                    alert("Login successful!");
+                                    window.location.href = "homeadmin.html"; // Redirect to homepage
+                                } else {
+                                    alert("Invalid email or password.");
+                                }
+                            });
+
+                            function getCookie(name) {
+                                var value = "; " + document.cookie;
+                                var parts = value.split("; " + name + "=");
+                                if (parts.length === 2) return parts.pop().split(";").shift();
+                            }
+        </script>
+    </body>
+</html>
